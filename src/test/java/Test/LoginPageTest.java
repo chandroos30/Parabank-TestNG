@@ -1,0 +1,33 @@
+package Test;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import Pages.LoginPage;
+
+public class LoginPageTest extends TestSuiteSetUp{
+
+	LoginPage loginPage; // declaring here so that all methods can access this object
+	
+	@BeforeClass
+	public void setUp() {
+		loginPage = new LoginPage(driver); // LoginPage constructor will be invoked in LoginPage class
+	}
+
+	@Test(priority = 1)
+	public void verifyLoginWithInvalidCredentials() {
+		loginPage.enterUsername("Chandroo");
+		loginPage.enterPassword("Chandru@4");
+		loginPage.clickLogin();
+	}
+
+	@Test(priority = 2)
+	public void verifyLoginWithValidCredentials() {
+//		LoginPage loginPage = new LoginPage(driver); // By extending the BaseClass the driver is assigned here.
+		loginPage.enterUsername("Chandroo");
+		loginPage.enterPassword("Chandru@3");
+		loginPage.clickLogin();
+	}
+
+}
