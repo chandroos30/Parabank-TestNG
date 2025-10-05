@@ -12,20 +12,20 @@ public class LoginPageTest extends TestSuiteSetUp{
 	
 	@BeforeClass
 	public void setUp() {
-		loginPage = new LoginPage(driver); // LoginPage constructor will be invoked in LoginPage class
+		loginPage = new LoginPage(); // LoginPage constructor will be invoked in LoginPage class
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 0)
 	public void verifyLoginWithInvalidCredentials() {
-		loginPage.enterUsername("Chandroo");
+		loginPage.enterUsername("Chandru");
 		loginPage.enterPassword("Chandru@4");
 		loginPage.clickLogin();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void verifyLoginWithValidCredentials() {
 //		LoginPage loginPage = new LoginPage(driver); // By extending the BaseClass the driver is assigned here.
-		loginPage.enterUsername("Chandroo");
+		loginPage.enterUsername("Chandruo");
 		loginPage.enterPassword("Chandru@3");
 		loginPage.clickLogin();
 	}

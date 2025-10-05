@@ -10,9 +10,9 @@ public class TransferFundPageTest extends TestSuiteSetUp {
 
 	TransferFundsPage transferFundsPage;
 
-	@Test(priority = 2)
+	@Test(priority = 0)
 	public void transferFundsPageTest() {
-		transferFundsPage = new TransferFundsPage(driver);
+		transferFundsPage = new TransferFundsPage();
 		transferFundsPage.transferFundButtonClick();
 		transferFundsPage.enterAmountToTransfer("30");
 		transferFundsPage.selectFromAccount();

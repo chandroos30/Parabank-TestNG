@@ -3,13 +3,14 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import Driver.DriverManager;
+
 public class RegisterPage {
 	String url = "https://parabank.parasoft.com/";
+	WebDriver driver;
 
-	private WebDriver driver;
-
-	public RegisterPage(WebDriver driver) {
-		this.driver = driver;
+	public RegisterPage() {
+		this.driver = DriverManager.getDriver();
 	}
 
 	public void openSite() {
@@ -80,11 +81,11 @@ public class RegisterPage {
 	public void enterconfirmPassword(String password) {
 		driver.findElement(confirmPasswordField).sendKeys(password);
 	}
-	
+
 	public void clickLogOutButton() {
 		driver.findElement(logOutButton).click();
 	}
-	
+
 	public void clickPostRegisterButton() {
 		driver.findElement(postRegisterButton).click();
 	}

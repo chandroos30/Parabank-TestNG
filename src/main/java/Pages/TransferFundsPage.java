@@ -3,14 +3,19 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import Driver.DriverManager;
+import Utils.Waits;
 
 public class TransferFundsPage {
 	
 	private WebDriver driver;
 	
-	public TransferFundsPage(WebDriver driver) {
-		this.driver = driver;
+	public TransferFundsPage() {
+		this.driver = DriverManager.getDriver();
+		Waits.implicitWait(driver);
 	}
 	
 	//Locators
@@ -22,6 +27,7 @@ public class TransferFundsPage {
 	private By toAccountDD = By.id("toAccountId");
 	private By transferButton = By.xpath("//input[@value='Transfer']");
 	
+	//Actions
 	public void clickOpenNewAcMenuButton() {
 		driver.findElement(openNewAccountMenuButton).click();
 	}
@@ -39,12 +45,14 @@ public class TransferFundsPage {
 	}
 	
 	public void selectFromAccount() {
-		Select select = new Select(driver.findElement(fromAccountDD));
+		WebElement fromAcDDElement = driver.findElement(fromAccountDD);
+		Select select = new Select(fromAcDDElement);
 		select.selectByIndex(0);
 	}
 	
 	public void selectToAccount() {
-		Select select = new Select(driver.findElement(toAccountDD));
+		WebElement toAcDDElement = driver.findElement(toAccountDD);
+		Select select = new Select(toAcDDElement);
 		select.selectByIndex(1);
 	}
 	

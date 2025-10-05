@@ -3,6 +3,7 @@ package Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import Driver.DriverManager;
 import Pages.LoginPage;
 import Pages.RegisterPage;
 
@@ -12,7 +13,7 @@ public class RegisterPageTest extends TestSuiteSetUp{
 	
 	@BeforeClass
 	public void setUp() {
-		registerPage = new RegisterPage(driver); // LoginPage constructor will be invoked in LoginPage class
+		registerPage = new RegisterPage(); // ResgisterPage constructor will be invoked in LoginPage class
 		registerPage.openSite();
 	}
 	
@@ -27,7 +28,7 @@ public class RegisterPageTest extends TestSuiteSetUp{
 		registerPage.entercustomerSSN("123456789");
 		registerPage.entercustomerZipCode("635802");
 		registerPage.entercustomerPhone("9789797897");
-		registerPage.entercustomerUsername("Chandrooo");
+		registerPage.entercustomerUsername("Chandruoo");
 		registerPage.entercustomerPassword("Chandru@3");
 		registerPage.enterconfirmPassword("Chandru@3");
 		registerPage.clickPostRegisterButton();

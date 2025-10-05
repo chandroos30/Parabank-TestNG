@@ -3,14 +3,17 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import Driver.DriverManager;
+import Utils.Waits;
+
 public class LoginPage {
 
 	private WebDriver driver;
 
-	public LoginPage(WebDriver driver) { // once this constructor is invoked, driver inside the constructor will be
+	public LoginPage() { // once this constructor is invoked, driver inside the constructor will be
 											// assigned to all driver. instances
-		this.driver = driver; // this.driver -> driver inside this class | driver from LoginPageTest class is
-								// assigned here!
+		this.driver = DriverManager.getDriver(); // this.driver -> driver inside this class | driver from LoginPageTest class is assigned here!
+		Waits.implicitWait(driver);
 	}
 
 	// Locators

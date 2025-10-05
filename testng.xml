@@ -4,9 +4,8 @@
 		<classes>
 			<class name="Test.TestSuiteSetUp" />
 			<class name="Test.RegisterPageTest" />
-			<class name="Test.LoginPageTest" depends-on-methods="Test.RegisterPageTest.RegistrationProcessTest"/>
-			<class name="Test.TransferFundPageTest"
-				depends-on-methods="Test.LoginPageTest.verifyLoginWithValidCredentials" />
+			<class name="Test.LoginPageTest"/>
+			<class name="Test.TransferFundPageTest" />
 		</classes>
 	</test>
 </suite> 
