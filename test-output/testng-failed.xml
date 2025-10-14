@@ -3,14 +3,17 @@
 <suite name="Failed suite [Parabank Test Suite]">
   <test thread-count="5" name="Parabank Smoke Test(failed)">
     <classes>
-      <class name="Test.RegisterPageTest">
+      <class name="Test.TransferFundPageTest">
+        <methods>
+          <include name="transferFundsPageTest"/>
+        </methods>
+      </class> <!-- Test.TransferFundPageTest -->
+      <class name="Test.LoginPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="quitBrowser"/>
-          <include name="RegistrationProcessTest"/>
-          <include name="setUpTest"/>
+          <include name="verifyLoginWithValidCredentials" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Test.RegisterPageTest -->
+      </class> <!-- Test.LoginPageTest -->
     </classes>
   </test> <!-- Parabank Smoke Test(failed) -->
 </suite> <!-- Failed suite [Parabank Test Suite] -->

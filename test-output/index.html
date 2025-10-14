@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Parabank_Test_Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,  1 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,10 +103,24 @@
                     <div class="method-list-content failed suite-Parabank_Test_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Parabank_Test_Suite" title="Test.RegisterPageTest" class="method navigator-link" hash-for-method="RegistrationProcessTest">RegistrationProcessTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Parabank_Test_Suite" title="Test.LoginPageTest" class="method navigator-link" hash-for-method="verifyLoginWithValidCredentials(Chand-123, Chand@123)">verifyLoginWithValidCredentials(Chand-123, Chand@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Parabank_Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Parabank_Test_Suite" class="hide-methods skipped suite-Parabank_Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-Parabank_Test_Suite -->
+                      <a href="#" panel-name="suite-Parabank_Test_Suite" class="show-methods skipped suite-Parabank_Test_Suite"> (show)</a> <!-- show-methods skipped suite-Parabank_Test_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Parabank_Test_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Parabank_Test_Suite" title="Test.TransferFundPageTest" class="method navigator-link" hash-for-method="transferFundsPageTest">transferFundsPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Parabank_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,17 +131,7 @@
                     <div class="method-list-content passed suite-Parabank_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Parabank_Test_Suite" title="Test.TransferFundPageTest" class="method navigator-link" hash-for-method="transferFundsPageTest">transferFundsPageTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Parabank_Test_Suite" title="Test.LoginPageTest" class="method navigator-link" hash-for-method="verifyLoginWithInvalidCredentials">verifyLoginWithInvalidCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Parabank_Test_Suite" title="Test.LoginPageTest" class="method navigator-link" hash-for-method="verifyLoginWithValidCredentials">verifyLoginWithValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Parabank_Test_Suite" title="Test.RegisterPageTest" class="method navigator-link" hash-for-method="RegistrationProcessTest(Chand-123, Chand@123)">RegistrationProcessTest(Chand-123, Chand@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Parabank_Test_Suite -->
@@ -145,46 +149,27 @@
           <div class="suite-Parabank_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Test.RegisterPageTest</span>
+              <span class="class-name">Test.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="RegistrationProcessTest">
-                  </a> <!-- RegistrationProcessTest -->
-                  <span class="method-name">RegistrationProcessTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Log Out&apos;]&quot;}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.27&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d12fa9ffff5eaf9cd5d7b6f2e1ca2440, findElement {value=//a[text()=&apos;Log Out&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59932/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d12fa9ffff5eaf9cd5d7b6f2e1ca2440
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at Pages.RegisterPage.clickLogOutButton(RegisterPage.java:86)
-	at Test.RegisterPageTest.RegistrationProcessTest(RegisterPageTest.java:35)
+                  <a name="verifyLoginWithValidCredentials(Chand-123, Chand@123)">
+                  </a> <!-- verifyLoginWithValidCredentials(Chand-123, Chand@123) -->
+                  <span class="method-name">verifyLoginWithValidCredentials</span>
+                  <span class="parameters">(Chand-123,Chand@123)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Title of the Page mismatched expected [ParaBank | Accounts Overview] but found [ParaBank | Error]
+	at Test.LoginPageTest.verifyLoginWithValidCredentials(LoginPageTest.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 31 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Parabank_Test_Suite-class-failed -->
-          <div class="suite-Parabank_Test_Suite-class-passed">
+          <div class="suite-Parabank_Test_Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">Test.TransferFundPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -193,28 +178,26 @@ Session ID: d12fa9ffff5eaf9cd5d7b6f2e1ca2440
                   <a name="transferFundsPageTest">
                   </a> <!-- transferFundsPageTest -->
                   <span class="method-name">transferFundsPageTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TransferFundPageTest.transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@4be29ed9] depends on not successfully finished methods in group &quot;login&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Parabank_Test_Suite-class-passed -->
+          </div> <!-- suite-Parabank_Test_Suite-class-skipped -->
           <div class="suite-Parabank_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Test.LoginPageTest</span>
+              <span class="class-name">Test.RegisterPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoginWithInvalidCredentials">
-                  </a> <!-- verifyLoginWithInvalidCredentials -->
-                  <span class="method-name">verifyLoginWithInvalidCredentials</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLoginWithValidCredentials">
-                  </a> <!-- verifyLoginWithValidCredentials -->
-                  <span class="method-name">verifyLoginWithValidCredentials</span>
+                  <a name="RegistrationProcessTest(Chand-123, Chand@123)">
+                  </a> <!-- RegistrationProcessTest(Chand-123, Chand@123) -->
+                  <span class="method-name">RegistrationProcessTest</span>
+                  <span class="parameters">(Chand-123,Chand@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -258,6 +241,22 @@ Session ID: d12fa9ffff5eaf9cd5d7b6f2e1ca2440
             <span class="header-content">Groups for Parabank Test Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">login</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyLoginWithValidCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">register</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">RegistrationProcessTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Parabank_Test_Suite" class="panel">
@@ -274,23 +273,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'RegistrationProcessTest')
-data.setCell(0, 2, 'Test.RegisterPageTest')
-data.setCell(0, 3, 2076);
+data.setCell(0, 1, 'verifyLoginWithValidCredentials')
+data.setCell(0, 2, 'Test.LoginPageTest')
+data.setCell(0, 3, 4006);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyLoginWithValidCredentials')
-data.setCell(1, 2, 'Test.LoginPageTest')
-data.setCell(1, 3, 1759);
+data.setCell(1, 1, 'RegistrationProcessTest')
+data.setCell(1, 2, 'Test.RegisterPageTest')
+data.setCell(1, 3, 2744);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'transferFundsPageTest')
 data.setCell(2, 2, 'Test.TransferFundPageTest')
-data.setCell(2, 3, 1480);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyLoginWithInvalidCredentials')
-data.setCell(3, 2, 'Test.LoginPageTest')
-data.setCell(3, 3, 801);
+data.setCell(2, 3, 0);
 window.suiteTableData['Parabank_Test_Suite']= { tableData: data, tableDiv: 'times-div-Parabank_Test_Suite'}
 return data;
 }
@@ -310,36 +305,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Parabank_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.RegisterPageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpTest</span>
-                <br/>
-                <span class="ignored-method-name">quitBrowser</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.TransferFundPageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpTest</span>
-                <br/>
-                <span class="ignored-method-name">quitBrowser</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Test.LoginPageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">quitBrowser</span>
-                <br/>
-                <span class="ignored-method-name">setUpTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Parabank_Test_Suite" class="panel">
@@ -358,42 +326,31 @@ return data;
               <div class="chronological-class-name">Test.RegisterPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1339 ms</span>
+                <span class="method-start">3204 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">RegistrationProcessTest</span>
-                <span class="method-start">3679 ms</span>
+                <span class="method-name">RegistrationProcessTest(Chand-123, Chand@123)</span>
+                <span class="method-start">3216 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">5781 ms</span>
+                <span class="method-start">5962 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyLoginWithInvalidCredentials</span>
-                <span class="method-start">5816 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyLoginWithValidCredentials</span>
-                <span class="method-start">6620 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Test.TransferFundPageTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">transferFundsPageTest</span>
-                <span class="method-start">8383 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLoginWithValidCredentials(Chand-123, Chand@123)</span>
+                <span class="method-start">5963 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.TestSuiteSetUp</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">quitBrowser</span>
-                <span class="method-start">9942 ms</span>
+                <span class="method-start">10027 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -12,7 +12,7 @@ public class BaseClass {
 				"C:\\Users\\chand\\SDET\\Parabank(TestNG)\\Driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		DriverManager.setDriver(driver);
-		DriverManager.getDriver().manage().window().maximize();;
+		DriverManager.getDriver().manage().window().maximize();
 	}
 
 	public void browserClose() {

@@ -4,16 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import Driver.DriverManager;
-import Utils.Waits;
+import Utils.WaitUtils;
 
 public class LoginPage {
 
 	private WebDriver driver;
+	private WaitUtils waitUtils;
 
 	public LoginPage() { // once this constructor is invoked, driver inside the constructor will be
 											// assigned to all driver. instances
 		this.driver = DriverManager.getDriver(); // this.driver -> driver inside this class | driver from LoginPageTest class is assigned here!
-		Waits.implicitWait(driver);
+		this.waitUtils = new WaitUtils(20);
 	}
 
 	// Locators
@@ -24,15 +25,15 @@ public class LoginPage {
 
 	// Actions
 	public void enterUsername(String username) {
-		driver.findElement(usernameField).sendKeys(username);
+		waitUtils.waitForVisibility(usernameField).sendKeys(username);
 	}
 
 	public void enterPassword(String password) {
-		driver.findElement(passwordField).sendKeys(password);
+		waitUtils.waitForVisibility(passwordField).sendKeys(password);
 	}
 
 	public void clickLogin() {
-		driver.findElement(loginButton).click();
+		waitUtils.waitForVisibility(loginButton).click();
 	}
 
 	public String getTitleoOfPage() {

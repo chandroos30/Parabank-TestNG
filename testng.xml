@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Parabank Test Suite">
+<suite name="Parabank Test Suite" >
 	<test name="Parabank Smoke Test">
 		<classes>
 			<class name="Test.TestSuiteSetUp" />
 			<class name="Test.RegisterPageTest" />
-			<class name="Test.LoginPageTest"/>
+			<class name="Test.LoginPageTest" />
 			<class name="Test.TransferFundPageTest" />
 		</classes>
 	</test>

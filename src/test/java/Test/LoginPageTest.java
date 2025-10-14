@@ -1,12 +1,13 @@
 package Test;
 
-import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+
 import Pages.LoginPage;
 
-public class LoginPageTest extends TestSuiteSetUp{
+public class LoginPageTest{
 
 	LoginPage loginPage; // declaring here so that all methods can access this object
 	
@@ -15,19 +16,27 @@ public class LoginPageTest extends TestSuiteSetUp{
 		loginPage = new LoginPage(); // LoginPage constructor will be invoked in LoginPage class
 	}
 
-	@Test(priority = 0)
-	public void verifyLoginWithInvalidCredentials() {
-		loginPage.enterUsername("Chandru");
-		loginPage.enterPassword("Chandru@4");
-		loginPage.clickLogin();
-	}
+	
+	  @Test(groups = "login", priority = 0, retryAnalyzer = RetryLogic.Retry.class, dependsOnGroups = "register")
+	  public void verifyLoginWithInvalidCredentials() { 
+		  loginPage.enterUsername("Chandru"); 
+		  loginPage.enterPassword("Chandru@4");
+		  loginPage.clickLogin();
+		  String actualValue = loginPage.getTitleoOfPage();
+		  String expectedValue = "ParaBank | Error"; 
+		  Assert.assertEquals(actualValue, expectedValue); 
+	  }
+	 
 
-	@Test(priority = 1)
-	public void verifyLoginWithValidCredentials() {
-//		LoginPage loginPage = new LoginPage(driver); // By extending the BaseClass the driver is assigned here.
-		loginPage.enterUsername("Chandruo");
-		loginPage.enterPassword("Chandru@3");
+	@Test(groups = "login", priority = 1, dataProvider = "RegisterScenario", dataProviderClass = DataProviders.DataProviders.class, dependsOnMethods = "verifyLoginWithInvalidCredentials")
+	public void verifyLoginWithValidCredentials(String userName, String password) {
+		loginPage.enterUsername(userName);
+		loginPage.enterPassword(password);
 		loginPage.clickLogin();
+		String actualTitle = loginPage.getTitleoOfPage();
+		System.out.println(loginPage.getTitleoOfPage());
+		String expectedTitle = "ParaBank | Accounts Overview";
+		Assert.assertEquals(actualTitle, expectedTitle, "Title of the Page mismatched");
 	}
 
 }

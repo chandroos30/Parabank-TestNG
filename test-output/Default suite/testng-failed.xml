@@ -6,8 +6,8 @@
       <class name="Test.LoginPageTest">
         <methods>
           <include name="verifyLoginWithInvalidCredentials"/>
-          <include name="setUpTest"/>
-          <include name="verifyLoginWithValidCredentials"/>
+          <include name="setUp"/>
+          <include name="verifyLoginWithValidCredentials" invocation-numbers="0"/>
         </methods>
       </class> <!-- Test.LoginPageTest -->
     </classes>

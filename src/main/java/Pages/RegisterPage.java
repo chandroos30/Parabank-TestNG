@@ -4,17 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import Driver.DriverManager;
+import Utils.WaitUtils;
 
 public class RegisterPage {
-	String url = "https://parabank.parasoft.com/";
-	WebDriver driver;
+	private WebDriver driver;
+	private WaitUtils waitUtils;
 
 	public RegisterPage() {
 		this.driver = DriverManager.getDriver();
-	}
-
-	public void openSite() {
-		driver.get(url);
+		this.waitUtils = new WaitUtils(20);
 	}
 
 	// Locators
@@ -35,58 +33,64 @@ public class RegisterPage {
 
 	// Actions
 	public void clickPreRegisterButton() {
-		driver.findElement(preRegisterButton).click();
+		waitUtils.waitForVisibility(preRegisterButton).click();
+		;
 	}
 
 	public void entercustomerFirstName(String firstname) {
-		driver.findElement(customerFirstNameField).sendKeys(firstname);
+		waitUtils.waitForVisibility(customerFirstNameField).sendKeys(firstname);
 	}
 
 	public void entercustomerLastName(String lastname) {
-		driver.findElement(customerLastNameField).sendKeys(lastname);
+		waitUtils.waitForVisibility(customerLastNameField).sendKeys(lastname);
 	}
 
 	public void entercustomerAddress(String address) {
-		driver.findElement(customerAddressField).sendKeys(address);
+		waitUtils.waitForVisibility(customerAddressField).sendKeys(address);
 	}
 
 	public void entercustomerCity(String city) {
-		driver.findElement(customerCityField).sendKeys(city);
+		waitUtils.waitForVisibility(customerCityField).sendKeys(city);
 	}
 
 	public void entercustomerState(String state) {
-		driver.findElement(customerStateField).sendKeys(state);
+		waitUtils.waitForVisibility(customerStateField).sendKeys(state);
 	}
 
 	public void entercustomerZipCode(String zipCode) {
-		driver.findElement(customerZipCodeField).sendKeys(zipCode);
+		waitUtils.waitForVisibility(customerZipCodeField).sendKeys(zipCode);
 	}
 
 	public void entercustomerPhone(String phone) {
-		driver.findElement(customerPhoneField).sendKeys(phone);
+		waitUtils.waitForVisibility(customerPhoneField).sendKeys(phone);
 	}
 
 	public void entercustomerSSN(String ssn) {
-		driver.findElement(customerSSNField).sendKeys(ssn);
+		waitUtils.waitForVisibility(customerSSNField).sendKeys(ssn);
+		driver.findElement(customerSSNField);
 	}
 
 	public void entercustomerUsername(String username) {
-		driver.findElement(customerUsernameField).sendKeys(username);
+		waitUtils.waitForVisibility(customerUsernameField).sendKeys(username);
 	}
 
 	public void entercustomerPassword(String password) {
-		driver.findElement(customerPasswordField).sendKeys(password);
+		waitUtils.waitForVisibility(customerPasswordField).sendKeys(password);
 	}
 
 	public void enterconfirmPassword(String password) {
-		driver.findElement(confirmPasswordField).sendKeys(password);
+		waitUtils.waitForVisibility(confirmPasswordField).sendKeys(password);
 	}
 
 	public void clickLogOutButton() {
-		driver.findElement(logOutButton).click();
+		waitUtils.waitForVisibility(logOutButton).click();
 	}
 
 	public void clickPostRegisterButton() {
-		driver.findElement(postRegisterButton).click();
+		waitUtils.waitForVisibility(postRegisterButton).click();
+	}
+	
+	public String getTitle() {
+		return driver.getTitle();
 	}
 }

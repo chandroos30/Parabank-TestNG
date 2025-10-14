@@ -1,18 +1,18 @@
 package Test;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Pages.TransferFundsPage;
 
-public class TransferFundPageTest extends TestSuiteSetUp {
+public class TransferFundPageTest{
 
 	TransferFundsPage transferFundsPage;
 
-	@Test(priority = 0)
-	public void transferFundsPageTest() {
+	@Test(priority = 0, retryAnalyzer = RetryLogic.Retry.class, dependsOnGroups = {"login"})
+	public void transferFundsPageTest() throws InterruptedException {
 		transferFundsPage = new TransferFundsPage();
+		transferFundsPage.clickOpenNewAcMenuButton();
+		transferFundsPage.clickOpenNewAcButton();
 		transferFundsPage.transferFundButtonClick();
 		transferFundsPage.enterAmountToTransfer("30");
 		transferFundsPage.selectFromAccount();
