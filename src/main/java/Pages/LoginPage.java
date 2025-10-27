@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import Driver.DriverManager;
@@ -43,5 +44,5 @@ public class LoginPage {
 	public void billPay() {
 		driver.findElement(BillPayButton).click();
 	}
-
+	
 }

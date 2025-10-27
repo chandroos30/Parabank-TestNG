@@ -23,7 +23,7 @@ public class LoginPageTest{
 		  loginPage.enterPassword("Chandru@4");
 		  loginPage.clickLogin();
 		  String actualValue = loginPage.getTitleoOfPage();
-		  String expectedValue = "ParaBank | Error"; 
+		  String expectedValue = "ParaBank | Erro"; 
 		  Assert.assertEquals(actualValue, expectedValue); 
 	  }
 	 

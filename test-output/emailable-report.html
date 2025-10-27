@@ -9,17 +9,32 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Parabank Test Suite</th></tr>
-<tr><td><a href="#t0">Parabank Smoke Test</a></td><td class="num">1</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">6,790</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Parabank Smoke Test</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">22,042</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Parabank Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Parabank Smoke Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Test.LoginPageTest</td><td><a href="#m0">verifyLoginWithValidCredentials</a></td><td rowspan="1">1760453983544</td><td rowspan="1">4006</td></tr><tr><th colspan="4">Parabank Smoke Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">Test.TransferFundPageTest</td><td><a href="#m1">transferFundsPageTest</a></td><td rowspan="1">1760453987556</td><td rowspan="1">0</td></tr><tr><th colspan="4">Parabank Smoke Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Test.RegisterPageTest</td><td><a href="#m2">RegistrationProcessTest</a></td><td rowspan="1">1760453980797</td><td rowspan="1">2744</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Parabank Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Parabank Smoke Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Test.RegisterPageTest</td><td><a href="#m0">RegistrationProcessTest</a></td><td rowspan="1">1761559261715</td><td rowspan="1">21792</td></tr><tr><th colspan="4">Parabank Smoke Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">Test.LoginPageTest</td><td><a href="#m1">verifyLoginWithInvalidCredentials</a></td><td rowspan="1">1761559283702</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m2">verifyLoginWithValidCredentials</a></td><td rowspan="1">1761559283706</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">Test.TransferFundPageTest</td><td><a href="#m3">transferFundsPageTest</a></td><td rowspan="1">1761559283708</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Parabank Smoke Test</h2><h3 id="m0">Test.LoginPageTest#verifyLoginWithValidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Chand-123</td><td>Chand@123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Title of the Page mismatched expected [ParaBank | Accounts Overview] but found [ParaBank | Error]
-	at Test.LoginPageTest.verifyLoginWithValidCredentials(LoginPageTest.java:37)
+<h2>Parabank Smoke Test</h2><h3 id="m0">Test.RegisterPageTest#RegistrationProcessTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Chand-123</td><td>Chand@123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()=&apos;Log Out&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.27&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58729}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58729/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6164f91f235c0bd7ee9643d6e971f3c6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Utils.WaitUtils.waitForVisibility(WaitUtils.java:25)
+	at Pages.RegisterPage.clickLogOutButton(RegisterPage.java:86)
+	at Test.RegisterPageTest.RegistrationProcessTest(RegisterPageTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Test.TransferFundPageTest#transferFundsPageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TransferFundPageTest.transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@4be29ed9] depends on not successfully finished methods in group &quot;login&quot;
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Test.LoginPageTest#verifyLoginWithInvalidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method LoginPageTest.verifyLoginWithInvalidCredentials()[pri:0, instance:Test.LoginPageTest@4a83a74a] depends on not successfully finished methods in group &quot;register&quot;
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Test.RegisterPageTest#RegistrationProcessTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Chand-123</td><td>Chand@123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Test.LoginPageTest#verifyLoginWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method Test.LoginPageTest.verifyLoginWithValidCredentials() on instance Test.LoginPageTest@4a83a74a depends on not successfully finished methods 
+[Test.LoginPageTest.verifyLoginWithInvalidCredentials() on instance Test.LoginPageTest@4a83a74a]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Test.TransferFundPageTest#transferFundsPageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TransferFundPageTest.transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@1349883] depends on not successfully finished methods in group &quot;login&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

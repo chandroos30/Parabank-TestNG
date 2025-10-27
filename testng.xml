@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Parabank Test Suite" >
+<suite name="Parabank Test Suite">
+	<listeners>
+		<listener class-name="Listeners.TestListeners" />
+	</listeners>
 	<test name="Parabank Smoke Test">
 		<classes>
 			<class name="Test.TestSuiteSetUp" />

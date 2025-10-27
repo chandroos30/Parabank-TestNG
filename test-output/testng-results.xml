@@ -1,23 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
+<testng-results ignored="0" total="4" passed="0" failed="1" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-14T20:29:40 IST" name="Parabank Test Suite" finished-at="2025-10-14T20:29:47 IST" duration-ms="6790">
+  <suite started-at="2025-10-27T15:31:01 IST" name="Parabank Test Suite" finished-at="2025-10-27T15:31:23 IST" duration-ms="22042">
     <groups>
       <group name="login">
-        <method signature="LoginPageTest.verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:Test.LoginPageTest@3a7442c7]" name="verifyLoginWithValidCredentials" class="Test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyLoginWithInvalidCredentials()[pri:0, instance:Test.LoginPageTest@4a83a74a]" name="verifyLoginWithInvalidCredentials" class="Test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:Test.LoginPageTest@4a83a74a]" name="verifyLoginWithValidCredentials" class="Test.LoginPageTest"/>
       </group> <!-- login -->
       <group name="register">
-        <method signature="RegisterPageTest.RegistrationProcessTest(java.lang.String,java.lang.String)[pri:0, instance:Test.RegisterPageTest@6bbe85a8]" name="RegistrationProcessTest" class="Test.RegisterPageTest"/>
+        <method signature="RegisterPageTest.RegistrationProcessTest(java.lang.String,java.lang.String)[pri:0, instance:Test.RegisterPageTest@196a42c3]" name="RegistrationProcessTest" class="Test.RegisterPageTest"/>
       </group> <!-- register -->
     </groups>
-    <test started-at="2025-10-14T20:29:40 IST" name="Parabank Smoke Test" finished-at="2025-10-14T20:29:47 IST" duration-ms="6790">
+    <test started-at="2025-10-27T15:31:01 IST" name="Parabank Smoke Test" finished-at="2025-10-27T15:31:23 IST" duration-ms="22042">
       <class name="Test.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.LoginPageTest@3a7442c7]" started-at="2025-10-14T20:29:43 IST" name="setUp" finished-at="2025-10-14T20:29:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.LoginPageTest@4a83a74a]" started-at="2025-10-27T15:31:23 IST" name="setUp" finished-at="2025-10-27T15:31:23 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:Test.LoginPageTest@3a7442c7]" started-at="2025-10-14T20:29:43 IST" name="verifyLoginWithValidCredentials" data-provider="LoginScenario" finished-at="2025-10-14T20:29:47 IST" duration-ms="4006" status="FAIL">
+        <test-method signature="verifyLoginWithInvalidCredentials()[pri:0, instance:Test.LoginPageTest@4a83a74a]" started-at="2025-10-27T15:31:23 IST" name="verifyLoginWithInvalidCredentials" depends-on-groups="register" finished-at="2025-10-27T15:31:23 IST" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method LoginPageTest.verifyLoginWithInvalidCredentials()[pri:0, instance:Test.LoginPageTest@4a83a74a] depends on not successfully finished methods in group "register"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method LoginPageTest.verifyLoginWithInvalidCredentials()[pri:0, instance:Test.LoginPageTest@4a83a74a] depends on not successfully finished methods in group "register"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method signature="verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:Test.LoginPageTest@4a83a74a]" started-at="2025-10-27T15:31:23 IST" name="verifyLoginWithValidCredentials" finished-at="2025-10-27T15:31:23 IST" depends-on-methods="Test.LoginPageTest.verifyLoginWithInvalidCredentials" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Test.LoginPageTest.verifyLoginWithValidCredentials() on instance Test.LoginPageTest@4a83a74a depends on not successfully finished methods 
+[Test.LoginPageTest.verifyLoginWithInvalidCredentials() on instance Test.LoginPageTest@4a83a74a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Test.LoginPageTest.verifyLoginWithValidCredentials() on instance Test.LoginPageTest@4a83a74a depends on not successfully finished methods 
+[Test.LoginPageTest.verifyLoginWithInvalidCredentials() on instance Test.LoginPageTest@4a83a74a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithValidCredentials -->
+      </class> <!-- Test.LoginPageTest -->
+      <class name="Test.TestSuiteSetUp">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:Test.TestSuiteSetUp@795509d9]" started-at="2025-10-27T15:30:57 IST" name="setUpTest" finished-at="2025-10-27T15:31:01 IST" duration-ms="3790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Test.TestSuiteSetUp@795509d9]" started-at="2025-10-27T15:31:23 IST" name="quitBrowser" finished-at="2025-10-27T15:31:27 IST" duration-ms="3314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- Test.TestSuiteSetUp -->
+      <class name="Test.TransferFundPageTest">
+        <test-method signature="transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@1349883]" started-at="2025-10-27T15:31:23 IST" name="transferFundsPageTest" depends-on-groups="login" finished-at="2025-10-27T15:31:23 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TransferFundPageTest.transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@1349883] depends on not successfully finished methods in group "login"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TransferFundPageTest.transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@1349883] depends on not successfully finished methods in group "login"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- transferFundsPageTest -->
+      </class> <!-- Test.TransferFundPageTest -->
+      <class name="Test.RegisterPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.RegisterPageTest@196a42c3]" started-at="2025-10-27T15:31:01 IST" name="setUp" finished-at="2025-10-27T15:31:01 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="RegistrationProcessTest(java.lang.String,java.lang.String)[pri:0, instance:Test.RegisterPageTest@196a42c3]" started-at="2025-10-27T15:31:01 IST" name="RegistrationProcessTest" data-provider="RegisterScenario" finished-at="2025-10-27T15:31:23 IST" duration-ms="21792" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -30,18 +147,27 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Title of the Page mismatched expected [ParaBank | Accounts Overview] but found [ParaBank | Error]]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()='Log Out'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.27'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58729}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58729/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6164f91f235c0bd7ee9643d6e971f3c6]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Title of the Page mismatched expected [ParaBank | Accounts Overview] but found [ParaBank | Error]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at Test.LoginPageTest.verifyLoginWithValidCredentials(LoginPageTest.java:37)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[text()='Log Out'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.27'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\chand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58729}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58729/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6164f91f235c0bd7ee9643d6e971f3c6
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Utils.WaitUtils.waitForVisibility(WaitUtils.java:25)
+at Pages.RegisterPage.clickLogOutButton(RegisterPage.java:86)
+at Test.RegisterPageTest.RegistrationProcessTest(RegisterPageTest.java:36)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,73 +198,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithValidCredentials -->
-      </class> <!-- Test.LoginPageTest -->
-      <class name="Test.TestSuiteSetUp">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:Test.TestSuiteSetUp@117159c0]" started-at="2025-10-14T20:29:37 IST" name="setUpTest" finished-at="2025-10-14T20:29:40 IST" duration-ms="3186" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Test.TestSuiteSetUp@117159c0]" started-at="2025-10-14T20:29:47 IST" name="quitBrowser" finished-at="2025-10-14T20:29:50 IST" duration-ms="3322" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- Test.TestSuiteSetUp -->
-      <class name="Test.TransferFundPageTest">
-        <test-method signature="transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@4be29ed9]" started-at="2025-10-14T20:29:47 IST" name="transferFundsPageTest" depends-on-groups="login" finished-at="2025-10-14T20:29:47 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TransferFundPageTest.transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@4be29ed9] depends on not successfully finished methods in group "login"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TransferFundPageTest.transferFundsPageTest()[pri:0, instance:Test.TransferFundPageTest@4be29ed9] depends on not successfully finished methods in group "login"
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- transferFundsPageTest -->
-      </class> <!-- Test.TransferFundPageTest -->
-      <class name="Test.RegisterPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.RegisterPageTest@6bbe85a8]" started-at="2025-10-14T20:29:40 IST" name="setUp" finished-at="2025-10-14T20:29:40 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="RegistrationProcessTest(java.lang.String,java.lang.String)[pri:0, instance:Test.RegisterPageTest@6bbe85a8]" started-at="2025-10-14T20:29:40 IST" name="RegistrationProcessTest" data-provider="RegisterScenario" finished-at="2025-10-14T20:29:43 IST" duration-ms="2744" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chand-123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Chand@123]]>
-              </value>
-            </param>
-          </params>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegistrationProcessTest -->
